@@ -35,6 +35,10 @@ jobs:
          run: |
             axel -n $(nproc) ${{ github.event.inputs.S }}
 
+        - name: Download Framework.jar
+         run: |
+            axel -n $(nproc) ${{ github.event.inputs.F }}
+
        - name : PATCH-ING
          run: |
             sudo chmod 777 -R *
