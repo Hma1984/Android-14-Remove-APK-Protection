@@ -34,10 +34,6 @@ jobs:
        - name: Download Framework.jar
          run: |
             axel -n $(nproc) ${{ github.event.inputs.F }}
-        
-         - name: Download services.jar
-         run: |
-            axel -n $(nproc) ${{ github.event.inputs.s }}
 
        - name : PATCH-ING
          run: |
