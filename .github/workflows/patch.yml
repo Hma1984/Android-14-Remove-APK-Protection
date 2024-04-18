@@ -7,7 +7,7 @@ on:
       description: 'Framework.jar Url'
       required: true
       default: ''
-     s:
+     S:
       description: 'services.jar Url'
       required: true
       default: ''
@@ -30,10 +30,10 @@ jobs:
             cd $GITHUB_WORKSPACE
             echo "Setting Vienam timezone"
             sudo timedatectl set-timezone Asia/Ho_Chi_Minh
-      
-       - name: Download Framework.jar
+            
+       - name: Download Services.jar
          run: |
-            axel -n $(nproc) ${{ github.event.inputs.F }}
+            axel -n $(nproc) ${{ github.event.inputs.S }}
 
        - name : PATCH-ING
          run: |
