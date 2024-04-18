@@ -1,4 +1,4 @@
-name: miuivs_patch_build
+name: Patch_Services
 
 on:
   workflow_dispatch:
